@@ -5,4 +5,4 @@ authors = ["kuviman <kuviman@gmail.com>"]
 
 [dependencies]
 emscripten-sys = { path = "../emscripten-sys" }
-prelude = { path = "../prelude" }
+prelude = { git = "https://github.com/kuviman/commons" }
