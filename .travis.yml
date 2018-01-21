@@ -5,7 +5,7 @@ install:
 script:
   - cargo build --verbose --all --target wasm32-unknown-emscripten
 before_deploy:
-  - cargo doc --no-deps --all
+  - cargo doc --no-deps --all --target wasm32-unknown-emscripten
   - >-
     echo '<meta http-equiv=refresh content=0;url=emscripten/index.html>' >
     target/doc/index.html
