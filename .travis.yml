@@ -8,12 +8,12 @@ before_deploy:
   - cargo doc --no-deps --all --target wasm32-unknown-emscripten
   - >-
     echo '<meta http-equiv=refresh content=0;url=emscripten/index.html>' >
-    target/doc/index.html
+    target/wasm32-unknown-emscripten/doc/index.html
 deploy:
   provider: pages
   skip-cleanup: true
   github-token: $TOKEN
   keep-history: true
-  local-dir: target/doc
+  local-dir: target/wasm32-unknown-emscripten/doc
   on:
     branch: master
