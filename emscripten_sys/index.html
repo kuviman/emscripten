@@ -1,0 +1,986 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="generator" content="rustdoc">
+    <meta name="description" content="API documentation for the Rust `emscripten_sys` crate.">
+    <meta name="keywords" content="rust, rustlang, rust-lang, emscripten_sys">
+
+    <title>emscripten_sys - Rust</title>
+
+    <link rel="stylesheet" type="text/css" href="../normalize.css">
+    <link rel="stylesheet" type="text/css" href="../rustdoc.css">
+    <link rel="stylesheet" type="text/css" href="../main.css">
+    
+
+    
+    
+</head>
+<body class="rustdoc mod">
+    <!--[if lte IE 8]>
+    <div class="warning">
+        This old browser is unsupported and will most likely display funky
+        things.
+    </div>
+    <![endif]-->
+
+    
+
+    <nav class="sidebar">
+        
+        <p class='location'>Crate emscripten_sys</p><div class="block items"><ul><li><a href="#structs">Structs</a></li><li><a href="#constants">Constants</a></li><li><a href="#functions">Functions</a></li><li><a href="#types">Type Definitions</a></li></ul></div><p class='location'></p><script>window.sidebarCurrent = {name: 'emscripten_sys', ty: 'mod', relpath: '../'};</script>
+    </nav>
+
+    <nav class="sub">
+        <form class="search-form js-only">
+            <div class="search-container">
+                <input class="search-input" name="search"
+                       autocomplete="off"
+                       placeholder="Click or press ‘S’ to search, ‘?’ for more options…"
+                       type="search">
+            </div>
+        </form>
+    </nav>
+
+    <section id='main' class="content">
+<h1 class='fqn'><span class='in-band'>Crate <a class="mod" href=''>emscripten_sys</a></span><span class='out-of-band'><span id='render-detail'>
+                   <a id="toggle-all-docs" href="javascript:void(0)" title="collapse all docs">
+                       [<span class='inner'>&#x2212;</span>]
+                   </a>
+               </span><a class='srclink' href='../src/emscripten_sys/lib.rs.html#1-16' title='goto source code'>[src]</a></span></h1>
+<h2 id='structs' class='section-header'><a href="#structs">Structs</a></h2>
+<table>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.EmscriptenKeyboardEvent.html"
+                                  title='struct emscripten_sys::EmscriptenKeyboardEvent'>EmscriptenKeyboardEvent</a></td>
+                           <td class='docblock-short'>
+                                
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.EmscriptenMouseEvent.html"
+                                  title='struct emscripten_sys::EmscriptenMouseEvent'>EmscriptenMouseEvent</a></td>
+                           <td class='docblock-short'>
+                                
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.EmscriptenTouchEvent.html"
+                                  title='struct emscripten_sys::EmscriptenTouchEvent'>EmscriptenTouchEvent</a></td>
+                           <td class='docblock-short'>
+                                
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.EmscriptenTouchPoint.html"
+                                  title='struct emscripten_sys::EmscriptenTouchPoint'>EmscriptenTouchPoint</a></td>
+                           <td class='docblock-short'>
+                                
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.EmscriptenWebGLContextAttributes.html"
+                                  title='struct emscripten_sys::EmscriptenWebGLContextAttributes'>EmscriptenWebGLContextAttributes</a></td>
+                           <td class='docblock-short'>
+                                
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.EmscriptenWheelEvent.html"
+                                  title='struct emscripten_sys::EmscriptenWheelEvent'>EmscriptenWheelEvent</a></td>
+                           <td class='docblock-short'>
+                                
+                           </td>
+                       </tr></table><h2 id='constants' class='section-header'><a href="#constants">Constants</a></h2>
+<table>
+                       <tr class=' module-item'>
+                           <td><a class="constant" href="constant.DOM_DELTA_LINE.html"
+                                  title='constant emscripten_sys::DOM_DELTA_LINE'>DOM_DELTA_LINE</a></td>
+                           <td class='docblock-short'>
+                                
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="constant" href="constant.DOM_DELTA_PAGE.html"
+                                  title='constant emscripten_sys::DOM_DELTA_PAGE'>DOM_DELTA_PAGE</a></td>
+                           <td class='docblock-short'>
+                                
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="constant" href="constant.DOM_DELTA_PIXEL.html"
+                                  title='constant emscripten_sys::DOM_DELTA_PIXEL'>DOM_DELTA_PIXEL</a></td>
+                           <td class='docblock-short'>
+                                
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="constant" href="constant.DOM_KEY_LOCATION_LEFT.html"
+                                  title='constant emscripten_sys::DOM_KEY_LOCATION_LEFT'>DOM_KEY_LOCATION_LEFT</a></td>
+                           <td class='docblock-short'>
+                                
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="constant" href="constant.DOM_KEY_LOCATION_NUMPAD.html"
+                                  title='constant emscripten_sys::DOM_KEY_LOCATION_NUMPAD'>DOM_KEY_LOCATION_NUMPAD</a></td>
+                           <td class='docblock-short'>
+                                
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="constant" href="constant.DOM_KEY_LOCATION_RIGHT.html"
+                                  title='constant emscripten_sys::DOM_KEY_LOCATION_RIGHT'>DOM_KEY_LOCATION_RIGHT</a></td>
+                           <td class='docblock-short'>
+                                
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="constant" href="constant.DOM_KEY_LOCATION_STANDARD.html"
+                                  title='constant emscripten_sys::DOM_KEY_LOCATION_STANDARD'>DOM_KEY_LOCATION_STANDARD</a></td>
+                           <td class='docblock-short'>
+                                
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="constant" href="constant.EMSCRIPTEN_EVENT_CLICK.html"
+                                  title='constant emscripten_sys::EMSCRIPTEN_EVENT_CLICK'>EMSCRIPTEN_EVENT_CLICK</a></td>
+                           <td class='docblock-short'>
+                                
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="constant" href="constant.EMSCRIPTEN_EVENT_DBLCLICK.html"
+                                  title='constant emscripten_sys::EMSCRIPTEN_EVENT_DBLCLICK'>EMSCRIPTEN_EVENT_DBLCLICK</a></td>
+                           <td class='docblock-short'>
+                                
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="constant" href="constant.EMSCRIPTEN_EVENT_KEYDOWN.html"
+                                  title='constant emscripten_sys::EMSCRIPTEN_EVENT_KEYDOWN'>EMSCRIPTEN_EVENT_KEYDOWN</a></td>
+                           <td class='docblock-short'>
+                                
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="constant" href="constant.EMSCRIPTEN_EVENT_KEYPRESS.html"
+                                  title='constant emscripten_sys::EMSCRIPTEN_EVENT_KEYPRESS'>EMSCRIPTEN_EVENT_KEYPRESS</a></td>
+                           <td class='docblock-short'>
+                                
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="constant" href="constant.EMSCRIPTEN_EVENT_KEYUP.html"
+                                  title='constant emscripten_sys::EMSCRIPTEN_EVENT_KEYUP'>EMSCRIPTEN_EVENT_KEYUP</a></td>
+                           <td class='docblock-short'>
+                                
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="constant" href="constant.EMSCRIPTEN_EVENT_MOUSEDOWN.html"
+                                  title='constant emscripten_sys::EMSCRIPTEN_EVENT_MOUSEDOWN'>EMSCRIPTEN_EVENT_MOUSEDOWN</a></td>
+                           <td class='docblock-short'>
+                                
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="constant" href="constant.EMSCRIPTEN_EVENT_MOUSEENTER.html"
+                                  title='constant emscripten_sys::EMSCRIPTEN_EVENT_MOUSEENTER'>EMSCRIPTEN_EVENT_MOUSEENTER</a></td>
+                           <td class='docblock-short'>
+                                
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="constant" href="constant.EMSCRIPTEN_EVENT_MOUSELEAVE.html"
+                                  title='constant emscripten_sys::EMSCRIPTEN_EVENT_MOUSELEAVE'>EMSCRIPTEN_EVENT_MOUSELEAVE</a></td>
+                           <td class='docblock-short'>
+                                
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="constant" href="constant.EMSCRIPTEN_EVENT_MOUSEMOVE.html"
+                                  title='constant emscripten_sys::EMSCRIPTEN_EVENT_MOUSEMOVE'>EMSCRIPTEN_EVENT_MOUSEMOVE</a></td>
+                           <td class='docblock-short'>
+                                
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="constant" href="constant.EMSCRIPTEN_EVENT_MOUSEUP.html"
+                                  title='constant emscripten_sys::EMSCRIPTEN_EVENT_MOUSEUP'>EMSCRIPTEN_EVENT_MOUSEUP</a></td>
+                           <td class='docblock-short'>
+                                
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="constant" href="constant.EMSCRIPTEN_EVENT_TOUCHCANCEL.html"
+                                  title='constant emscripten_sys::EMSCRIPTEN_EVENT_TOUCHCANCEL'>EMSCRIPTEN_EVENT_TOUCHCANCEL</a></td>
+                           <td class='docblock-short'>
+                                
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="constant" href="constant.EMSCRIPTEN_EVENT_TOUCHEND.html"
+                                  title='constant emscripten_sys::EMSCRIPTEN_EVENT_TOUCHEND'>EMSCRIPTEN_EVENT_TOUCHEND</a></td>
+                           <td class='docblock-short'>
+                                
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="constant" href="constant.EMSCRIPTEN_EVENT_TOUCHMOVE.html"
+                                  title='constant emscripten_sys::EMSCRIPTEN_EVENT_TOUCHMOVE'>EMSCRIPTEN_EVENT_TOUCHMOVE</a></td>
+                           <td class='docblock-short'>
+                                
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="constant" href="constant.EMSCRIPTEN_EVENT_TOUCHSTART.html"
+                                  title='constant emscripten_sys::EMSCRIPTEN_EVENT_TOUCHSTART'>EMSCRIPTEN_EVENT_TOUCHSTART</a></td>
+                           <td class='docblock-short'>
+                                
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="constant" href="constant.EMSCRIPTEN_EVENT_WEBGLCONTEXTLOST.html"
+                                  title='constant emscripten_sys::EMSCRIPTEN_EVENT_WEBGLCONTEXTLOST'>EMSCRIPTEN_EVENT_WEBGLCONTEXTLOST</a></td>
+                           <td class='docblock-short'>
+                                
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="constant" href="constant.EMSCRIPTEN_EVENT_WEBGLCONTEXTRESTORED.html"
+                                  title='constant emscripten_sys::EMSCRIPTEN_EVENT_WEBGLCONTEXTRESTORED'>EMSCRIPTEN_EVENT_WEBGLCONTEXTRESTORED</a></td>
+                           <td class='docblock-short'>
+                                
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="constant" href="constant.EMSCRIPTEN_EVENT_WHEEL.html"
+                                  title='constant emscripten_sys::EMSCRIPTEN_EVENT_WHEEL'>EMSCRIPTEN_EVENT_WHEEL</a></td>
+                           <td class='docblock-short'>
+                                
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="constant" href="constant.EMSCRIPTEN_RESULT_DEFERRED.html"
+                                  title='constant emscripten_sys::EMSCRIPTEN_RESULT_DEFERRED'>EMSCRIPTEN_RESULT_DEFERRED</a></td>
+                           <td class='docblock-short'>
+                                
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="constant" href="constant.EMSCRIPTEN_RESULT_FAILED.html"
+                                  title='constant emscripten_sys::EMSCRIPTEN_RESULT_FAILED'>EMSCRIPTEN_RESULT_FAILED</a></td>
+                           <td class='docblock-short'>
+                                
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="constant" href="constant.EMSCRIPTEN_RESULT_FAILED_NOT_DEFERRED.html"
+                                  title='constant emscripten_sys::EMSCRIPTEN_RESULT_FAILED_NOT_DEFERRED'>EMSCRIPTEN_RESULT_FAILED_NOT_DEFERRED</a></td>
+                           <td class='docblock-short'>
+                                
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="constant" href="constant.EMSCRIPTEN_RESULT_INVALID_PARAM.html"
+                                  title='constant emscripten_sys::EMSCRIPTEN_RESULT_INVALID_PARAM'>EMSCRIPTEN_RESULT_INVALID_PARAM</a></td>
+                           <td class='docblock-short'>
+                                
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="constant" href="constant.EMSCRIPTEN_RESULT_INVALID_TARGET.html"
+                                  title='constant emscripten_sys::EMSCRIPTEN_RESULT_INVALID_TARGET'>EMSCRIPTEN_RESULT_INVALID_TARGET</a></td>
+                           <td class='docblock-short'>
+                                
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="constant" href="constant.EMSCRIPTEN_RESULT_NOT_SUPPORTED.html"
+                                  title='constant emscripten_sys::EMSCRIPTEN_RESULT_NOT_SUPPORTED'>EMSCRIPTEN_RESULT_NOT_SUPPORTED</a></td>
+                           <td class='docblock-short'>
+                                
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="constant" href="constant.EMSCRIPTEN_RESULT_NO_DATA.html"
+                                  title='constant emscripten_sys::EMSCRIPTEN_RESULT_NO_DATA'>EMSCRIPTEN_RESULT_NO_DATA</a></td>
+                           <td class='docblock-short'>
+                                
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="constant" href="constant.EMSCRIPTEN_RESULT_SUCCESS.html"
+                                  title='constant emscripten_sys::EMSCRIPTEN_RESULT_SUCCESS'>EMSCRIPTEN_RESULT_SUCCESS</a></td>
+                           <td class='docblock-short'>
+                                
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="constant" href="constant.EMSCRIPTEN_RESULT_TIMED_OUT.html"
+                                  title='constant emscripten_sys::EMSCRIPTEN_RESULT_TIMED_OUT'>EMSCRIPTEN_RESULT_TIMED_OUT</a></td>
+                           <td class='docblock-short'>
+                                
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="constant" href="constant.EMSCRIPTEN_RESULT_UNKNOWN_TARGET.html"
+                                  title='constant emscripten_sys::EMSCRIPTEN_RESULT_UNKNOWN_TARGET'>EMSCRIPTEN_RESULT_UNKNOWN_TARGET</a></td>
+                           <td class='docblock-short'>
+                                
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="constant" href="constant.EM_FALSE.html"
+                                  title='constant emscripten_sys::EM_FALSE'>EM_FALSE</a></td>
+                           <td class='docblock-short'>
+                                
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="constant" href="constant.EM_TRUE.html"
+                                  title='constant emscripten_sys::EM_TRUE'>EM_TRUE</a></td>
+                           <td class='docblock-short'>
+                                
+                           </td>
+                       </tr></table><h2 id='functions' class='section-header'><a href="#functions">Functions</a></h2>
+<table>
+                       <tr class=' module-item'>
+                           <td><a class="fn" href="fn.emscripten_GetProcAddress.html"
+                                  title='fn emscripten_sys::emscripten_GetProcAddress'>emscripten_GetProcAddress</a><a title='unsafe function' href='#'><sup>⚠</sup></a></td>
+                           <td class='docblock-short'>
+                                
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="fn" href="fn.emscripten_async_call.html"
+                                  title='fn emscripten_sys::emscripten_async_call'>emscripten_async_call</a><a title='unsafe function' href='#'><sup>⚠</sup></a></td>
+                           <td class='docblock-short'>
+                                
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="fn" href="fn.emscripten_async_load_script.html"
+                                  title='fn emscripten_sys::emscripten_async_load_script'>emscripten_async_load_script</a><a title='unsafe function' href='#'><sup>⚠</sup></a></td>
+                           <td class='docblock-short'>
+                                
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="fn" href="fn.emscripten_async_run_script.html"
+                                  title='fn emscripten_sys::emscripten_async_run_script'>emscripten_async_run_script</a><a title='unsafe function' href='#'><sup>⚠</sup></a></td>
+                           <td class='docblock-short'>
+                                
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="fn" href="fn.emscripten_async_wget.html"
+                                  title='fn emscripten_sys::emscripten_async_wget'>emscripten_async_wget</a><a title='unsafe function' href='#'><sup>⚠</sup></a></td>
+                           <td class='docblock-short'>
+                                
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="fn" href="fn.emscripten_async_wget2.html"
+                                  title='fn emscripten_sys::emscripten_async_wget2'>emscripten_async_wget2</a><a title='unsafe function' href='#'><sup>⚠</sup></a></td>
+                           <td class='docblock-short'>
+                                
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="fn" href="fn.emscripten_async_wget2_abort.html"
+                                  title='fn emscripten_sys::emscripten_async_wget2_abort'>emscripten_async_wget2_abort</a><a title='unsafe function' href='#'><sup>⚠</sup></a></td>
+                           <td class='docblock-short'>
+                                
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="fn" href="fn.emscripten_async_wget2_data.html"
+                                  title='fn emscripten_sys::emscripten_async_wget2_data'>emscripten_async_wget2_data</a><a title='unsafe function' href='#'><sup>⚠</sup></a></td>
+                           <td class='docblock-short'>
+                                
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="fn" href="fn.emscripten_async_wget_data.html"
+                                  title='fn emscripten_sys::emscripten_async_wget_data'>emscripten_async_wget_data</a><a title='unsafe function' href='#'><sup>⚠</sup></a></td>
+                           <td class='docblock-short'>
+                                
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="fn" href="fn.emscripten_cancel_main_loop.html"
+                                  title='fn emscripten_sys::emscripten_cancel_main_loop'>emscripten_cancel_main_loop</a><a title='unsafe function' href='#'><sup>⚠</sup></a></td>
+                           <td class='docblock-short'>
+                                
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="fn" href="fn.emscripten_exit_with_live_runtime.html"
+                                  title='fn emscripten_sys::emscripten_exit_with_live_runtime'>emscripten_exit_with_live_runtime</a><a title='unsafe function' href='#'><sup>⚠</sup></a></td>
+                           <td class='docblock-short'>
+                                
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="fn" href="fn.emscripten_force_exit.html"
+                                  title='fn emscripten_sys::emscripten_force_exit'>emscripten_force_exit</a><a title='unsafe function' href='#'><sup>⚠</sup></a></td>
+                           <td class='docblock-short'>
+                                
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="fn" href="fn.emscripten_get_canvas_size.html"
+                                  title='fn emscripten_sys::emscripten_get_canvas_size'>emscripten_get_canvas_size</a><a title='unsafe function' href='#'><sup>⚠</sup></a></td>
+                           <td class='docblock-short'>
+                                
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="fn" href="fn.emscripten_get_device_pixel_ratio.html"
+                                  title='fn emscripten_sys::emscripten_get_device_pixel_ratio'>emscripten_get_device_pixel_ratio</a><a title='unsafe function' href='#'><sup>⚠</sup></a></td>
+                           <td class='docblock-short'>
+                                
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="fn" href="fn.emscripten_get_element_css_size.html"
+                                  title='fn emscripten_sys::emscripten_get_element_css_size'>emscripten_get_element_css_size</a><a title='unsafe function' href='#'><sup>⚠</sup></a></td>
+                           <td class='docblock-short'>
+                                
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="fn" href="fn.emscripten_get_main_loop_timing.html"
+                                  title='fn emscripten_sys::emscripten_get_main_loop_timing'>emscripten_get_main_loop_timing</a><a title='unsafe function' href='#'><sup>⚠</sup></a></td>
+                           <td class='docblock-short'>
+                                
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="fn" href="fn.emscripten_get_mouse_status.html"
+                                  title='fn emscripten_sys::emscripten_get_mouse_status'>emscripten_get_mouse_status</a><a title='unsafe function' href='#'><sup>⚠</sup></a></td>
+                           <td class='docblock-short'>
+                                
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="fn" href="fn.emscripten_get_now.html"
+                                  title='fn emscripten_sys::emscripten_get_now'>emscripten_get_now</a><a title='unsafe function' href='#'><sup>⚠</sup></a></td>
+                           <td class='docblock-short'>
+                                
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="fn" href="fn.emscripten_hide_mouse.html"
+                                  title='fn emscripten_sys::emscripten_hide_mouse'>emscripten_hide_mouse</a><a title='unsafe function' href='#'><sup>⚠</sup></a></td>
+                           <td class='docblock-short'>
+                                
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="fn" href="fn.emscripten_is_webgl_context_lost.html"
+                                  title='fn emscripten_sys::emscripten_is_webgl_context_lost'>emscripten_is_webgl_context_lost</a><a title='unsafe function' href='#'><sup>⚠</sup></a></td>
+                           <td class='docblock-short'>
+                                
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="fn" href="fn.emscripten_pause_main_loop.html"
+                                  title='fn emscripten_sys::emscripten_pause_main_loop'>emscripten_pause_main_loop</a><a title='unsafe function' href='#'><sup>⚠</sup></a></td>
+                           <td class='docblock-short'>
+                                
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="fn" href="fn.emscripten_push_main_loop_blocker.html"
+                                  title='fn emscripten_sys::emscripten_push_main_loop_blocker'>emscripten_push_main_loop_blocker</a><a title='unsafe function' href='#'><sup>⚠</sup></a></td>
+                           <td class='docblock-short'>
+                                
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="fn" href="fn.emscripten_push_uncounted_main_loop_blocker.html"
+                                  title='fn emscripten_sys::emscripten_push_uncounted_main_loop_blocker'>emscripten_push_uncounted_main_loop_blocker</a><a title='unsafe function' href='#'><sup>⚠</sup></a></td>
+                           <td class='docblock-short'>
+                                
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="fn" href="fn.emscripten_random.html"
+                                  title='fn emscripten_sys::emscripten_random'>emscripten_random</a><a title='unsafe function' href='#'><sup>⚠</sup></a></td>
+                           <td class='docblock-short'>
+                                
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="fn" href="fn.emscripten_resume_main_loop.html"
+                                  title='fn emscripten_sys::emscripten_resume_main_loop'>emscripten_resume_main_loop</a><a title='unsafe function' href='#'><sup>⚠</sup></a></td>
+                           <td class='docblock-short'>
+                                
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="fn" href="fn.emscripten_run_preload_plugins_data.html"
+                                  title='fn emscripten_sys::emscripten_run_preload_plugins_data'>emscripten_run_preload_plugins_data</a><a title='unsafe function' href='#'><sup>⚠</sup></a></td>
+                           <td class='docblock-short'>
+                                
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="fn" href="fn.emscripten_run_script.html"
+                                  title='fn emscripten_sys::emscripten_run_script'>emscripten_run_script</a><a title='unsafe function' href='#'><sup>⚠</sup></a></td>
+                           <td class='docblock-short'>
+                                
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="fn" href="fn.emscripten_run_script_int.html"
+                                  title='fn emscripten_sys::emscripten_run_script_int'>emscripten_run_script_int</a><a title='unsafe function' href='#'><sup>⚠</sup></a></td>
+                           <td class='docblock-short'>
+                                
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="fn" href="fn.emscripten_run_script_string.html"
+                                  title='fn emscripten_sys::emscripten_run_script_string'>emscripten_run_script_string</a><a title='unsafe function' href='#'><sup>⚠</sup></a></td>
+                           <td class='docblock-short'>
+                                
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="fn" href="fn.emscripten_set_canvas_size.html"
+                                  title='fn emscripten_sys::emscripten_set_canvas_size'>emscripten_set_canvas_size</a><a title='unsafe function' href='#'><sup>⚠</sup></a></td>
+                           <td class='docblock-short'>
+                                
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="fn" href="fn.emscripten_set_click_callback.html"
+                                  title='fn emscripten_sys::emscripten_set_click_callback'>emscripten_set_click_callback</a><a title='unsafe function' href='#'><sup>⚠</sup></a></td>
+                           <td class='docblock-short'>
+                                
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="fn" href="fn.emscripten_set_dblclick_callback.html"
+                                  title='fn emscripten_sys::emscripten_set_dblclick_callback'>emscripten_set_dblclick_callback</a><a title='unsafe function' href='#'><sup>⚠</sup></a></td>
+                           <td class='docblock-short'>
+                                
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="fn" href="fn.emscripten_set_element_css_size.html"
+                                  title='fn emscripten_sys::emscripten_set_element_css_size'>emscripten_set_element_css_size</a><a title='unsafe function' href='#'><sup>⚠</sup></a></td>
+                           <td class='docblock-short'>
+                                
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="fn" href="fn.emscripten_set_keydown_callback.html"
+                                  title='fn emscripten_sys::emscripten_set_keydown_callback'>emscripten_set_keydown_callback</a><a title='unsafe function' href='#'><sup>⚠</sup></a></td>
+                           <td class='docblock-short'>
+                                
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="fn" href="fn.emscripten_set_keypress_callback.html"
+                                  title='fn emscripten_sys::emscripten_set_keypress_callback'>emscripten_set_keypress_callback</a><a title='unsafe function' href='#'><sup>⚠</sup></a></td>
+                           <td class='docblock-short'>
+                                
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="fn" href="fn.emscripten_set_keyup_callback.html"
+                                  title='fn emscripten_sys::emscripten_set_keyup_callback'>emscripten_set_keyup_callback</a><a title='unsafe function' href='#'><sup>⚠</sup></a></td>
+                           <td class='docblock-short'>
+                                
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="fn" href="fn.emscripten_set_main_loop.html"
+                                  title='fn emscripten_sys::emscripten_set_main_loop'>emscripten_set_main_loop</a><a title='unsafe function' href='#'><sup>⚠</sup></a></td>
+                           <td class='docblock-short'>
+                                
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="fn" href="fn.emscripten_set_main_loop_arg.html"
+                                  title='fn emscripten_sys::emscripten_set_main_loop_arg'>emscripten_set_main_loop_arg</a><a title='unsafe function' href='#'><sup>⚠</sup></a></td>
+                           <td class='docblock-short'>
+                                
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="fn" href="fn.emscripten_set_main_loop_expected_blockers.html"
+                                  title='fn emscripten_sys::emscripten_set_main_loop_expected_blockers'>emscripten_set_main_loop_expected_blockers</a><a title='unsafe function' href='#'><sup>⚠</sup></a></td>
+                           <td class='docblock-short'>
+                                
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="fn" href="fn.emscripten_set_main_loop_timing.html"
+                                  title='fn emscripten_sys::emscripten_set_main_loop_timing'>emscripten_set_main_loop_timing</a><a title='unsafe function' href='#'><sup>⚠</sup></a></td>
+                           <td class='docblock-short'>
+                                
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="fn" href="fn.emscripten_set_mousedown_callback.html"
+                                  title='fn emscripten_sys::emscripten_set_mousedown_callback'>emscripten_set_mousedown_callback</a><a title='unsafe function' href='#'><sup>⚠</sup></a></td>
+                           <td class='docblock-short'>
+                                
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="fn" href="fn.emscripten_set_mouseenter_callback.html"
+                                  title='fn emscripten_sys::emscripten_set_mouseenter_callback'>emscripten_set_mouseenter_callback</a><a title='unsafe function' href='#'><sup>⚠</sup></a></td>
+                           <td class='docblock-short'>
+                                
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="fn" href="fn.emscripten_set_mouseleave_callback.html"
+                                  title='fn emscripten_sys::emscripten_set_mouseleave_callback'>emscripten_set_mouseleave_callback</a><a title='unsafe function' href='#'><sup>⚠</sup></a></td>
+                           <td class='docblock-short'>
+                                
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="fn" href="fn.emscripten_set_mousemove_callback.html"
+                                  title='fn emscripten_sys::emscripten_set_mousemove_callback'>emscripten_set_mousemove_callback</a><a title='unsafe function' href='#'><sup>⚠</sup></a></td>
+                           <td class='docblock-short'>
+                                
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="fn" href="fn.emscripten_set_mouseup_callback.html"
+                                  title='fn emscripten_sys::emscripten_set_mouseup_callback'>emscripten_set_mouseup_callback</a><a title='unsafe function' href='#'><sup>⚠</sup></a></td>
+                           <td class='docblock-short'>
+                                
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="fn" href="fn.emscripten_set_touchcancel_callback.html"
+                                  title='fn emscripten_sys::emscripten_set_touchcancel_callback'>emscripten_set_touchcancel_callback</a><a title='unsafe function' href='#'><sup>⚠</sup></a></td>
+                           <td class='docblock-short'>
+                                
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="fn" href="fn.emscripten_set_touchend_callback.html"
+                                  title='fn emscripten_sys::emscripten_set_touchend_callback'>emscripten_set_touchend_callback</a><a title='unsafe function' href='#'><sup>⚠</sup></a></td>
+                           <td class='docblock-short'>
+                                
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="fn" href="fn.emscripten_set_touchmove_callback.html"
+                                  title='fn emscripten_sys::emscripten_set_touchmove_callback'>emscripten_set_touchmove_callback</a><a title='unsafe function' href='#'><sup>⚠</sup></a></td>
+                           <td class='docblock-short'>
+                                
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="fn" href="fn.emscripten_set_touchstart_callback.html"
+                                  title='fn emscripten_sys::emscripten_set_touchstart_callback'>emscripten_set_touchstart_callback</a><a title='unsafe function' href='#'><sup>⚠</sup></a></td>
+                           <td class='docblock-short'>
+                                
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="fn" href="fn.emscripten_set_webglcontextlost_callback.html"
+                                  title='fn emscripten_sys::emscripten_set_webglcontextlost_callback'>emscripten_set_webglcontextlost_callback</a><a title='unsafe function' href='#'><sup>⚠</sup></a></td>
+                           <td class='docblock-short'>
+                                
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="fn" href="fn.emscripten_set_webglcontextrestored_callback.html"
+                                  title='fn emscripten_sys::emscripten_set_webglcontextrestored_callback'>emscripten_set_webglcontextrestored_callback</a><a title='unsafe function' href='#'><sup>⚠</sup></a></td>
+                           <td class='docblock-short'>
+                                
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="fn" href="fn.emscripten_set_wheel_callback.html"
+                                  title='fn emscripten_sys::emscripten_set_wheel_callback'>emscripten_set_wheel_callback</a><a title='unsafe function' href='#'><sup>⚠</sup></a></td>
+                           <td class='docblock-short'>
+                                
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="fn" href="fn.emscripten_webgl_create_context.html"
+                                  title='fn emscripten_sys::emscripten_webgl_create_context'>emscripten_webgl_create_context</a><a title='unsafe function' href='#'><sup>⚠</sup></a></td>
+                           <td class='docblock-short'>
+                                
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="fn" href="fn.emscripten_webgl_destroy_context.html"
+                                  title='fn emscripten_sys::emscripten_webgl_destroy_context'>emscripten_webgl_destroy_context</a><a title='unsafe function' href='#'><sup>⚠</sup></a></td>
+                           <td class='docblock-short'>
+                                
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="fn" href="fn.emscripten_webgl_enable_extension.html"
+                                  title='fn emscripten_sys::emscripten_webgl_enable_extension'>emscripten_webgl_enable_extension</a><a title='unsafe function' href='#'><sup>⚠</sup></a></td>
+                           <td class='docblock-short'>
+                                
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="fn" href="fn.emscripten_webgl_get_current_context.html"
+                                  title='fn emscripten_sys::emscripten_webgl_get_current_context'>emscripten_webgl_get_current_context</a><a title='unsafe function' href='#'><sup>⚠</sup></a></td>
+                           <td class='docblock-short'>
+                                
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="fn" href="fn.emscripten_webgl_get_drawing_buffer_size.html"
+                                  title='fn emscripten_sys::emscripten_webgl_get_drawing_buffer_size'>emscripten_webgl_get_drawing_buffer_size</a><a title='unsafe function' href='#'><sup>⚠</sup></a></td>
+                           <td class='docblock-short'>
+                                
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="fn" href="fn.emscripten_webgl_init_context_attributes.html"
+                                  title='fn emscripten_sys::emscripten_webgl_init_context_attributes'>emscripten_webgl_init_context_attributes</a><a title='unsafe function' href='#'><sup>⚠</sup></a></td>
+                           <td class='docblock-short'>
+                                
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="fn" href="fn.emscripten_webgl_make_context_current.html"
+                                  title='fn emscripten_sys::emscripten_webgl_make_context_current'>emscripten_webgl_make_context_current</a><a title='unsafe function' href='#'><sup>⚠</sup></a></td>
+                           <td class='docblock-short'>
+                                
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="fn" href="fn.emscripten_wget.html"
+                                  title='fn emscripten_sys::emscripten_wget'>emscripten_wget</a><a title='unsafe function' href='#'><sup>⚠</sup></a></td>
+                           <td class='docblock-short'>
+                                
+                           </td>
+                       </tr></table><h2 id='types' class='section-header'><a href="#types">Type Definitions</a></h2>
+<table>
+                       <tr class=' module-item'>
+                           <td><a class="type" href="type.DOM_DELTA_MODE.html"
+                                  title='type emscripten_sys::DOM_DELTA_MODE'>DOM_DELTA_MODE</a></td>
+                           <td class='docblock-short'>
+                                
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="type" href="type.DOM_KEY_LOCATION.html"
+                                  title='type emscripten_sys::DOM_KEY_LOCATION'>DOM_KEY_LOCATION</a></td>
+                           <td class='docblock-short'>
+                                
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="type" href="type.EMSCRIPTEN_RESULT.html"
+                                  title='type emscripten_sys::EMSCRIPTEN_RESULT'>EMSCRIPTEN_RESULT</a></td>
+                           <td class='docblock-short'>
+                                
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="type" href="type.EMSCRIPTEN_WEBGL_CONTEXT_HANDLE.html"
+                                  title='type emscripten_sys::EMSCRIPTEN_WEBGL_CONTEXT_HANDLE'>EMSCRIPTEN_WEBGL_CONTEXT_HANDLE</a></td>
+                           <td class='docblock-short'>
+                                
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="type" href="type.EM_BOOL.html"
+                                  title='type emscripten_sys::EM_BOOL'>EM_BOOL</a></td>
+                           <td class='docblock-short'>
+                                
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="type" href="type.EM_EVENT_TYPE.html"
+                                  title='type emscripten_sys::EM_EVENT_TYPE'>EM_EVENT_TYPE</a></td>
+                           <td class='docblock-short'>
+                                
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="type" href="type.EM_UTF8.html"
+                                  title='type emscripten_sys::EM_UTF8'>EM_UTF8</a></td>
+                           <td class='docblock-short'>
+                                
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="type" href="type.em_arg_callback_func.html"
+                                  title='type emscripten_sys::em_arg_callback_func'>em_arg_callback_func</a></td>
+                           <td class='docblock-short'>
+                                
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="type" href="type.em_async_wget2_data_onerror_func.html"
+                                  title='type emscripten_sys::em_async_wget2_data_onerror_func'>em_async_wget2_data_onerror_func</a></td>
+                           <td class='docblock-short'>
+                                
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="type" href="type.em_async_wget2_data_onload_func.html"
+                                  title='type emscripten_sys::em_async_wget2_data_onload_func'>em_async_wget2_data_onload_func</a></td>
+                           <td class='docblock-short'>
+                                
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="type" href="type.em_async_wget2_data_onprogress_func.html"
+                                  title='type emscripten_sys::em_async_wget2_data_onprogress_func'>em_async_wget2_data_onprogress_func</a></td>
+                           <td class='docblock-short'>
+                                
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="type" href="type.em_async_wget2_onload_func.html"
+                                  title='type emscripten_sys::em_async_wget2_onload_func'>em_async_wget2_onload_func</a></td>
+                           <td class='docblock-short'>
+                                
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="type" href="type.em_async_wget2_onstatus_func.html"
+                                  title='type emscripten_sys::em_async_wget2_onstatus_func'>em_async_wget2_onstatus_func</a></td>
+                           <td class='docblock-short'>
+                                
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="type" href="type.em_async_wget_onload_func.html"
+                                  title='type emscripten_sys::em_async_wget_onload_func'>em_async_wget_onload_func</a></td>
+                           <td class='docblock-short'>
+                                
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="type" href="type.em_callback_func.html"
+                                  title='type emscripten_sys::em_callback_func'>em_callback_func</a></td>
+                           <td class='docblock-short'>
+                                
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="type" href="type.em_key_callback_func.html"
+                                  title='type emscripten_sys::em_key_callback_func'>em_key_callback_func</a></td>
+                           <td class='docblock-short'>
+                                
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="type" href="type.em_mouse_callback_func.html"
+                                  title='type emscripten_sys::em_mouse_callback_func'>em_mouse_callback_func</a></td>
+                           <td class='docblock-short'>
+                                
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="type" href="type.em_run_preload_plugins_data_onload_func.html"
+                                  title='type emscripten_sys::em_run_preload_plugins_data_onload_func'>em_run_preload_plugins_data_onload_func</a></td>
+                           <td class='docblock-short'>
+                                
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="type" href="type.em_str_callback_func.html"
+                                  title='type emscripten_sys::em_str_callback_func'>em_str_callback_func</a></td>
+                           <td class='docblock-short'>
+                                
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="type" href="type.em_touch_callback_func.html"
+                                  title='type emscripten_sys::em_touch_callback_func'>em_touch_callback_func</a></td>
+                           <td class='docblock-short'>
+                                
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="type" href="type.em_webgl_context_callback.html"
+                                  title='type emscripten_sys::em_webgl_context_callback'>em_webgl_context_callback</a></td>
+                           <td class='docblock-short'>
+                                
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="type" href="type.em_wheel_callback_func.html"
+                                  title='type emscripten_sys::em_wheel_callback_func'>em_wheel_callback_func</a></td>
+                           <td class='docblock-short'>
+                                
+                           </td>
+                       </tr></table></section>
+    <section id='search' class="content hidden"></section>
+
+    <section class="footer"></section>
+
+    <aside id="help" class="hidden">
+        <div>
+            <h1 class="hidden">Help</h1>
+
+            <div class="shortcuts">
+                <h2>Keyboard Shortcuts</h2>
+
+                <dl>
+                    <dt>?</dt>
+                    <dd>Show this help dialog</dd>
+                    <dt>S</dt>
+                    <dd>Focus the search field</dd>
+                    <dt>↑</dt>
+                    <dd>Move up in search results</dd>
+                    <dt>↓</dt>
+                    <dd>Move down in search results</dd>
+                    <dt>↹</dt>
+                    <dd>Switch tab</dd>
+                    <dt>&#9166;</dt>
+                    <dd>Go to active search result</dd>
+                    <dt style="width:31px;">+ / -</dt>
+                    <dd>Collapse/expand all sections</dd>
+                </dl>
+            </div>
+
+            <div class="infos">
+                <h2>Search Tricks</h2>
+
+                <p>
+                    Prefix searches with a type followed by a colon (e.g.
+                    <code>fn:</code>) to restrict the search to a given type.
+                </p>
+
+                <p>
+                    Accepted types are: <code>fn</code>, <code>mod</code>,
+                    <code>struct</code>, <code>enum</code>,
+                    <code>trait</code>, <code>type</code>, <code>macro</code>,
+                    and <code>const</code>.
+                </p>
+
+                <p>
+                    Search functions by type signature (e.g.
+                    <code>vec -> usize</code> or <code>* -> vec</code>)
+                </p>
+            </div>
+        </div>
+    </aside>
+
+    
+
+    <script>
+        window.rootPath = "../";
+        window.currentCrate = "emscripten_sys";
+    </script>
+    <script src="../main.js"></script>
+    <script defer src="../search-index.js"></script>
+</body>
+</html>
