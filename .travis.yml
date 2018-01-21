@@ -1,6 +1,6 @@
 language: rust
 install:
-  - apt install emscripten
+  - sudo apt install emscripten
   - rustup target add wasm32-unknown-emscripten
 script:
   - cargo build --verbose --all --target wasm32-unknown-emscripten
