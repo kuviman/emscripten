@@ -1,14 +1,18 @@
 language: rust
+before-script:
+  - rustup target add wasm32-unknown-emscripten
 script:
   - cargo build --verbose --all --target wasm32-unknown-emscripten
-after_success: >
-  cargo doc --no-deps --all \
-
-  && echo '<meta http-equiv=refresh content=0;url=emscripten/index.html>' >
-  target/doc/index.html && \
-
-  sudo pip install ghp-import && \
-
-  ghp-import -n target/doc && \
-
-  git push -qf https://${TOKEN}@github.com/${TRAVIS_REPO_SLUG}.git gh-pages
+before-deploy:
+  - cargo doc --no-deps --all
+  - >-
+    echo '<meta http-equiv=refresh content=0;url=emscripten/index.html>' >
+    target/doc/index.html
+deploy:
+  provider: pages
+  skip-cleanup: true
+  github-token: $TOKEN
+  keep-history: true
+  local-dir: target/doc
+  on:
+    branch: master
