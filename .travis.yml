@@ -1,9 +1,9 @@
 language: rust
-install:
-  - sudo apt install emscripten
+before_script:
   - rustup target add wasm32-unknown-emscripten
+  - cargo install carge-web
 script:
-  - cargo build --verbose --all --target wasm32-unknown-emscripten
+  - (cd emscripten && cargo web test --target wasm32-unknown-emscripten)
 before_deploy:
   - cargo doc --no-deps --all --target wasm32-unknown-emscripten
   - >-
