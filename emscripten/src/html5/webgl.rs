@@ -18,6 +18,7 @@ pub struct ContextAttributes {
     pub fail_if_major_performance_caveat: bool,
     pub version: Version,
     pub enable_extensions_by_default: bool,
+    pub explicit_swap_control: bool,
 }
 
 impl ContextAttributes {
@@ -36,6 +37,7 @@ impl ContextAttributes {
                 minor: attr.minorVersion as i32,
             },
             enable_extensions_by_default: attr.enableExtensionsByDefault != EM_FALSE,
+            explicit_swap_control: attr.explicitSwapControl != EM_FALSE,
         }
     }
     fn into(&self) -> EmscriptenWebGLContextAttributes {
@@ -67,6 +69,11 @@ impl ContextAttributes {
             majorVersion: self.version.major as c_int,
             minorVersion: self.version.minor as c_int,
             enableExtensionsByDefault: if self.enable_extensions_by_default {
+                EM_TRUE
+            } else {
+                EM_FALSE
+            },
+            explicitSwapControl: if self.explicit_swap_control {
                 EM_TRUE
             } else {
                 EM_FALSE
