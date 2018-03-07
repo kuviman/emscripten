@@ -28,8 +28,9 @@
     
 
     <nav class="sidebar">
+        <div class="sidebar-menu">&#9776;</div>
         
-        <p class='location'>Struct ContextAttributes</p><div class="block items"><a class="sidebar-title" href="#fields">Fields</a><div class="sidebar-links"><a href="#structfield.alpha">alpha</a><a href="#structfield.depth">depth</a><a href="#structfield.stencil">stencil</a><a href="#structfield.antialias">antialias</a><a href="#structfield.premultiplied_alpha">premultiplied_alpha</a><a href="#structfield.preserve_drawing_buffer">preserve_drawing_buffer</a><a href="#structfield.prefer_low_power_to_high_performance">prefer_low_power_to_high_performance</a><a href="#structfield.fail_if_major_performance_caveat">fail_if_major_performance_caveat</a><a href="#structfield.version">version</a><a href="#structfield.enable_extensions_by_default">enable_extensions_by_default</a></div><a class="sidebar-title" href="#implementations">Trait Implementations</a><div class="sidebar-links"><a href="#impl-Debug">Debug</a><a href="#impl-Clone">Clone</a><a href="#impl-Default">Default</a></div></div><p class='location'><a href='../index.html'>emscripten</a>::<wbr><a href='index.html'>webgl</a></p><script>window.sidebarCurrent = {name: 'ContextAttributes', ty: 'struct', relpath: ''};</script><script defer src="sidebar-items.js"></script>
+        <p class='location'>Struct ContextAttributes</p><div class="sidebar-elems"><div class="block items"><a class="sidebar-title" href="#fields">Fields</a><div class="sidebar-links"><a href="#structfield.alpha">alpha</a><a href="#structfield.depth">depth</a><a href="#structfield.stencil">stencil</a><a href="#structfield.antialias">antialias</a><a href="#structfield.premultiplied_alpha">premultiplied_alpha</a><a href="#structfield.preserve_drawing_buffer">preserve_drawing_buffer</a><a href="#structfield.prefer_low_power_to_high_performance">prefer_low_power_to_high_performance</a><a href="#structfield.fail_if_major_performance_caveat">fail_if_major_performance_caveat</a><a href="#structfield.version">version</a><a href="#structfield.enable_extensions_by_default">enable_extensions_by_default</a><a href="#structfield.explicit_swap_control">explicit_swap_control</a></div><a class="sidebar-title" href="#implementations">Trait Implementations</a><div class="sidebar-links"><a href="#impl-Debug">Debug</a><a href="#impl-Clone">Clone</a><a href="#impl-Default">Default</a></div></div><p class='location'><a href='../index.html'>emscripten</a>::<wbr><a href='index.html'>webgl</a></p><script>window.sidebarCurrent = {name: 'ContextAttributes', ty: 'struct', relpath: ''};</script><script defer src="sidebar-items.js"></script></div>
     </nav>
 
     <nav class="sub">
@@ -48,7 +49,7 @@
                    <a id="toggle-all-docs" href="javascript:void(0)" title="collapse all docs">
                        [<span class='inner'>&#x2212;</span>]
                    </a>
-               </span><a class='srclink' href='../../src/emscripten/html5/webgl.rs.html#10-21' title='goto source code'>[src]</a></span></h1>
+               </span><a class='srclink' href='../../src/emscripten/html5/webgl.rs.html#10-22' title='goto source code'>[src]</a></span></h1>
 <pre class='rust struct'>pub struct ContextAttributes {
     pub alpha: <a class="primitive" href="https://doc.rust-lang.org/nightly/std/primitive.bool.html">bool</a>,
     pub depth: <a class="primitive" href="https://doc.rust-lang.org/nightly/std/primitive.bool.html">bool</a>,
@@ -60,6 +61,7 @@
     pub fail_if_major_performance_caveat: <a class="primitive" href="https://doc.rust-lang.org/nightly/std/primitive.bool.html">bool</a>,
     pub version: <a class="struct" href="../../emscripten/webgl/struct.Version.html" title="struct emscripten::webgl::Version">Version</a>,
     pub enable_extensions_by_default: <a class="primitive" href="https://doc.rust-lang.org/nightly/std/primitive.bool.html">bool</a>,
+    pub explicit_swap_control: <a class="primitive" href="https://doc.rust-lang.org/nightly/std/primitive.bool.html">bool</a>,
 }</pre><h2 id='fields' class='fields small-section-header'>
                        Fields<a href='#fields' class='anchor'></a></h2><span id="structfield.alpha" class="structfield small-section-header">
                            <a href="#structfield.alpha" class="anchor field"></a>
@@ -101,6 +103,10 @@
                            <a href="#structfield.enable_extensions_by_default" class="anchor field"></a>
                            <span id="enable_extensions_by_default.v" class='invisible'>
                            <code>enable_extensions_by_default: <a class="primitive" href="https://doc.rust-lang.org/nightly/std/primitive.bool.html">bool</a></code>
+                           </span></span><span id="structfield.explicit_swap_control" class="structfield small-section-header">
+                           <a href="#structfield.explicit_swap_control" class="anchor field"></a>
+                           <span id="explicit_swap_control.v" class='invisible'>
+                           <code>explicit_swap_control: <a class="primitive" href="https://doc.rust-lang.org/nightly/std/primitive.bool.html">bool</a></code>
                            </span></span>
             <h2 id='implementations' class='small-section-header'>
               Trait Implementations<a href='#implementations' class='anchor'></a>
@@ -113,8 +119,8 @@
 <div class='docblock'><p>Returns a copy of the value. <a href="https://doc.rust-lang.org/nightly/core/clone/trait.Clone.html#tymethod.clone">Read more</a></p>
 </div><h4 id='method.clone_from' class="method"><span id='clone_from.v' class='invisible'><code>fn <a href='https://doc.rust-lang.org/nightly/core/clone/trait.Clone.html#method.clone_from' class='fnname'>clone_from</a>(&amp;mut self, source: <a class="primitive" href="https://doc.rust-lang.org/nightly/std/primitive.reference.html">&amp;</a>Self)</code></span><span class='out-of-band'><div class='ghost'></div><div class='since' title='Stable since Rust version 1.0.0'>1.0.0</div><a class='srclink' href='https://doc.rust-lang.org/nightly/src/core/clone.rs.html#112-114' title='goto source code'>[src]</a></span></h4>
 <div class='docblock'><p>Performs copy-assignment from <code>source</code>. <a href="https://doc.rust-lang.org/nightly/core/clone/trait.Clone.html#method.clone_from">Read more</a></p>
-</div></div><h3 id='impl-Default' class='impl'><span class='in-band'><code>impl <a class="trait" href="https://doc.rust-lang.org/nightly/core/default/trait.Default.html" title="trait core::default::Default">Default</a> for <a class="struct" href="../../emscripten/webgl/struct.ContextAttributes.html" title="struct emscripten::webgl::ContextAttributes">ContextAttributes</a></code><a href='#impl-Default' class='anchor'></a></span><span class='out-of-band'><div class='ghost'></div><a class='srclink' href='../../src/emscripten/html5/webgl.rs.html#78-86' title='goto source code'>[src]</a></span></h3>
-<div class='impl-items'><h4 id='method.default' class="method"><span id='default.v' class='invisible'><code>fn <a href='https://doc.rust-lang.org/nightly/core/default/trait.Default.html#tymethod.default' class='fnname'>default</a>() -&gt; Self</code></span><span class='out-of-band'><div class='ghost'></div><a class='srclink' href='../../src/emscripten/html5/webgl.rs.html#79-85' title='goto source code'>[src]</a></span></h4>
+</div></div><h3 id='impl-Default' class='impl'><span class='in-band'><code>impl <a class="trait" href="https://doc.rust-lang.org/nightly/core/default/trait.Default.html" title="trait core::default::Default">Default</a> for <a class="struct" href="../../emscripten/webgl/struct.ContextAttributes.html" title="struct emscripten::webgl::ContextAttributes">ContextAttributes</a></code><a href='#impl-Default' class='anchor'></a></span><span class='out-of-band'><div class='ghost'></div><a class='srclink' href='../../src/emscripten/html5/webgl.rs.html#85-93' title='goto source code'>[src]</a></span></h3>
+<div class='impl-items'><h4 id='method.default' class="method"><span id='default.v' class='invisible'><code>fn <a href='https://doc.rust-lang.org/nightly/core/default/trait.Default.html#tymethod.default' class='fnname'>default</a>() -&gt; Self</code></span><span class='out-of-band'><div class='ghost'></div><a class='srclink' href='../../src/emscripten/html5/webgl.rs.html#86-92' title='goto source code'>[src]</a></span></h4>
 <div class='docblock'><p>Returns the &quot;default value&quot; for a type. <a href="https://doc.rust-lang.org/nightly/core/default/trait.Default.html#tymethod.default">Read more</a></p>
 </div></div></section>
     <section id='search' class="content hidden"></section>

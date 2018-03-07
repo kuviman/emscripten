@@ -28,6 +28,7 @@
     
 
     <nav class="sidebar">
+        <div class="sidebar-menu">&#9776;</div>
         
         
     </nav>
@@ -157,6 +158,13 @@
 <span id="112">112</span>
 <span id="113">113</span>
 <span id="114">114</span>
+<span id="115">115</span>
+<span id="116">116</span>
+<span id="117">117</span>
+<span id="118">118</span>
+<span id="119">119</span>
+<span id="120">120</span>
+<span id="121">121</span>
 </pre><pre class="rust ">
 <span class="kw">use</span> ::<span class="kw-2">*</span>;
 
@@ -178,6 +186,7 @@
     <span class="kw">pub</span> <span class="ident">fail_if_major_performance_caveat</span>: <span class="ident">bool</span>,
     <span class="kw">pub</span> <span class="ident">version</span>: <span class="ident">Version</span>,
     <span class="kw">pub</span> <span class="ident">enable_extensions_by_default</span>: <span class="ident">bool</span>,
+    <span class="kw">pub</span> <span class="ident">explicit_swap_control</span>: <span class="ident">bool</span>,
 }
 
 <span class="kw">impl</span> <span class="ident">ContextAttributes</span> {
@@ -196,6 +205,7 @@
                 <span class="ident">minor</span>: <span class="ident">attr</span>.<span class="ident">minorVersion</span> <span class="kw">as</span> <span class="ident">i32</span>,
             },
             <span class="ident">enable_extensions_by_default</span>: <span class="ident">attr</span>.<span class="ident">enableExtensionsByDefault</span> <span class="op">!=</span> <span class="ident">EM_FALSE</span>,
+            <span class="ident">explicit_swap_control</span>: <span class="ident">attr</span>.<span class="ident">explicitSwapControl</span> <span class="op">!=</span> <span class="ident">EM_FALSE</span>,
         }
     }
     <span class="kw">fn</span> <span class="ident">into</span>(<span class="kw-2">&amp;</span><span class="self">self</span>) <span class="op">-&gt;</span> <span class="ident">EmscriptenWebGLContextAttributes</span> {
@@ -227,6 +237,11 @@
             <span class="ident">majorVersion</span>: <span class="self">self</span>.<span class="ident">version</span>.<span class="ident">major</span> <span class="kw">as</span> <span class="ident">c_int</span>,
             <span class="ident">minorVersion</span>: <span class="self">self</span>.<span class="ident">version</span>.<span class="ident">minor</span> <span class="kw">as</span> <span class="ident">c_int</span>,
             <span class="ident">enableExtensionsByDefault</span>: <span class="kw">if</span> <span class="self">self</span>.<span class="ident">enable_extensions_by_default</span> {
+                <span class="ident">EM_TRUE</span>
+            } <span class="kw">else</span> {
+                <span class="ident">EM_FALSE</span>
+            },
+            <span class="ident">explicitSwapControl</span>: <span class="kw">if</span> <span class="self">self</span>.<span class="ident">explicit_swap_control</span> {
                 <span class="ident">EM_TRUE</span>
             } <span class="kw">else</span> {
                 <span class="ident">EM_FALSE</span>
