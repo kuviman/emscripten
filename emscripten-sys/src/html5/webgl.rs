@@ -19,7 +19,7 @@ pub struct EmscriptenWebGLContextAttributes {
     pub majorVersion: c_int,
     pub minorVersion: c_int,
     pub enableExtensionsByDefault: EM_BOOL,
-    pub explicitSwapControl: EM_BOOL,   
+    pub explicitSwapControl: EM_BOOL,
 }
 
 pub type em_webgl_context_callback = Option<

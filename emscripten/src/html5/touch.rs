@@ -26,26 +26,26 @@ pub struct TouchPointIdentifier(c_long);
 #[derive(Debug, Copy, Clone)]
 pub struct TouchPoint {
     pub identifier: TouchPointIdentifier,
-    pub screen_pos: Vec2<i32>,
-    pub client_pos: Vec2<i32>,
-    pub page_pos: Vec2<i32>,
+    pub screen_pos: (i32, i32),
+    pub client_pos: (i32, i32),
+    pub page_pos: (i32, i32),
     pub is_changed: bool,
     pub on_target: bool,
-    pub target_pos: Vec2<i32>,
-    pub canvas_pos: Vec2<i32>,
+    pub target_pos: (i32, i32),
+    pub canvas_pos: (i32, i32),
 }
 
 impl TouchPoint {
     fn from(touch: &EmscriptenTouchPoint) -> TouchPoint {
         TouchPoint {
             identifier: TouchPointIdentifier(touch.identifier),
-            screen_pos: vec2(touch.screenX as i32, touch.screenY as i32),
-            client_pos: vec2(touch.clientX as i32, touch.clientY as i32),
-            page_pos: vec2(touch.pageX as i32, touch.pageY as i32),
+            screen_pos: (touch.screenX as i32, touch.screenY as i32),
+            client_pos: (touch.clientX as i32, touch.clientY as i32),
+            page_pos: (touch.pageX as i32, touch.pageY as i32),
             is_changed: touch.isChanged != EM_FALSE,
             on_target: touch.onTarget != EM_FALSE,
-            target_pos: vec2(touch.targetX as i32, touch.targetY as i32),
-            canvas_pos: vec2(touch.canvasX as i32, touch.canvasY as i32),
+            target_pos: (touch.targetX as i32, touch.targetY as i32),
+            canvas_pos: (touch.canvasX as i32, touch.canvasY as i32),
         }
     }
 }

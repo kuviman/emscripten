@@ -21,7 +21,7 @@ impl DomDeltaMode {
 #[derive(Debug)]
 pub struct WheelEvent {
     pub mouse: MouseEvent,
-    pub delta: Vec3<f64>,
+    pub delta: (f64, f64, f64),
     pub delta_mode: DomDeltaMode,
 }
 
@@ -42,7 +42,7 @@ impl WheelEvent {
     fn from(event: &EmscriptenWheelEvent) -> WheelEvent {
         WheelEvent {
             mouse: MouseEvent::from(&event.mouse),
-            delta: vec3(
+            delta: (
                 event.deltaX as f64,
                 event.deltaY as f64,
                 event.deltaZ as f64,

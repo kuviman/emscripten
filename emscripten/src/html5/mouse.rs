@@ -46,32 +46,32 @@ impl MouseButton {
 
 #[derive(Debug)]
 pub struct MouseEvent {
-    pub screen_pos: Vec2<i32>,
-    pub client_pos: Vec2<i32>,
+    pub screen_pos: (i32, i32),
+    pub client_pos: (i32, i32),
     pub ctrl_key: bool,
     pub shift_key: bool,
     pub alt_key: bool,
     pub meta_key: bool,
     pub button: MouseButton,
-    pub movement: Vec2<i32>,
-    pub target_pos: Vec2<i32>,
-    pub canvas_pos: Vec2<i32>,
+    pub movement: (i32, i32),
+    pub target_pos: (i32, i32),
+    pub canvas_pos: (i32, i32),
     pub padding: i32,
 }
 
 impl MouseEvent {
     pub(crate) fn from(event: &EmscriptenMouseEvent) -> MouseEvent {
         MouseEvent {
-            screen_pos: vec2(event.screenX as i32, event.screenY as i32),
-            client_pos: vec2(event.clientX as i32, event.clientY as i32),
+            screen_pos: (event.screenX as i32, event.screenY as i32),
+            client_pos: (event.clientX as i32, event.clientY as i32),
             ctrl_key: event.ctrlKey != EM_FALSE,
             shift_key: event.shiftKey != EM_FALSE,
             alt_key: event.altKey != EM_FALSE,
             meta_key: event.metaKey != EM_FALSE,
             button: MouseButton::from(event.button),
-            movement: vec2(event.movementX as i32, event.movementY as i32),
-            target_pos: vec2(event.targetX as i32, event.targetY as i32),
-            canvas_pos: vec2(event.canvasX as i32, event.canvasY as i32),
+            movement: (event.movementX as i32, event.movementY as i32),
+            target_pos: (event.targetX as i32, event.targetY as i32),
+            canvas_pos: (event.canvasX as i32, event.canvasY as i32),
             padding: event.padding as i32,
         }
     }

@@ -52,10 +52,10 @@ pub fn set_main_loop<F: FnMut() + 'static>(
     }
 }
 
-pub fn get_canvas_size() -> Vec2<usize> {
+pub fn get_canvas_size() -> (usize, usize) {
     let mut width: c_int = unsafe { mem::uninitialized() };
     let mut height: c_int = unsafe { mem::uninitialized() };
     let mut is_fullscreen: c_int = unsafe { mem::uninitialized() };
     unsafe { emscripten_get_canvas_size(&mut width, &mut height, &mut is_fullscreen) };
-    vec2(width as usize, height as usize)
+    (width as usize, height as usize)
 }
