@@ -10,8 +10,11 @@
     <title>mouse.rs.html -- source</title>
 
     <link rel="stylesheet" type="text/css" href="../../../normalize.css">
-    <link rel="stylesheet" type="text/css" href="../../../rustdoc.css">
-    <link rel="stylesheet" type="text/css" href="../../../main.css">
+    <link rel="stylesheet" type="text/css" href="../../../rustdoc.css" id="mainThemeStyle">
+    
+    <link rel="stylesheet" type="text/css" href="../../../dark.css">
+    <link rel="stylesheet" type="text/css" href="../../../main.css" id="themeStyle">
+    <script src="../../../storage.js"></script>
     
 
     
@@ -33,6 +36,13 @@
         
     </nav>
 
+    <div class="theme-picker">
+        <button id="theme-picker" aria-label="Pick another theme!">
+            <img src="../../../brush.svg" width="18" alt="Pick another theme!">
+        </button>
+        <div id="theme-choices"></div>
+    </div>
+    <script src="../../../theme.js"></script>
     <nav class="sub">
         <form class="search-form js-only">
             <div class="search-container">
@@ -316,32 +326,32 @@
 
 <span class="attribute">#[<span class="ident">derive</span>(<span class="ident">Debug</span>)]</span>
 <span class="kw">pub</span> <span class="kw">struct</span> <span class="ident">MouseEvent</span> {
-    <span class="kw">pub</span> <span class="ident">screen_pos</span>: <span class="ident">Vec2</span><span class="op">&lt;</span><span class="ident">i32</span><span class="op">&gt;</span>,
-    <span class="kw">pub</span> <span class="ident">client_pos</span>: <span class="ident">Vec2</span><span class="op">&lt;</span><span class="ident">i32</span><span class="op">&gt;</span>,
+    <span class="kw">pub</span> <span class="ident">screen_pos</span>: (<span class="ident">i32</span>, <span class="ident">i32</span>),
+    <span class="kw">pub</span> <span class="ident">client_pos</span>: (<span class="ident">i32</span>, <span class="ident">i32</span>),
     <span class="kw">pub</span> <span class="ident">ctrl_key</span>: <span class="ident">bool</span>,
     <span class="kw">pub</span> <span class="ident">shift_key</span>: <span class="ident">bool</span>,
     <span class="kw">pub</span> <span class="ident">alt_key</span>: <span class="ident">bool</span>,
     <span class="kw">pub</span> <span class="ident">meta_key</span>: <span class="ident">bool</span>,
     <span class="kw">pub</span> <span class="ident">button</span>: <span class="ident">MouseButton</span>,
-    <span class="kw">pub</span> <span class="ident">movement</span>: <span class="ident">Vec2</span><span class="op">&lt;</span><span class="ident">i32</span><span class="op">&gt;</span>,
-    <span class="kw">pub</span> <span class="ident">target_pos</span>: <span class="ident">Vec2</span><span class="op">&lt;</span><span class="ident">i32</span><span class="op">&gt;</span>,
-    <span class="kw">pub</span> <span class="ident">canvas_pos</span>: <span class="ident">Vec2</span><span class="op">&lt;</span><span class="ident">i32</span><span class="op">&gt;</span>,
+    <span class="kw">pub</span> <span class="ident">movement</span>: (<span class="ident">i32</span>, <span class="ident">i32</span>),
+    <span class="kw">pub</span> <span class="ident">target_pos</span>: (<span class="ident">i32</span>, <span class="ident">i32</span>),
+    <span class="kw">pub</span> <span class="ident">canvas_pos</span>: (<span class="ident">i32</span>, <span class="ident">i32</span>),
     <span class="kw">pub</span> <span class="ident">padding</span>: <span class="ident">i32</span>,
 }
 
 <span class="kw">impl</span> <span class="ident">MouseEvent</span> {
     <span class="kw">pub</span>(<span class="kw">crate</span>) <span class="kw">fn</span> <span class="ident">from</span>(<span class="ident">event</span>: <span class="kw-2">&amp;</span><span class="ident">EmscriptenMouseEvent</span>) <span class="op">-&gt;</span> <span class="ident">MouseEvent</span> {
         <span class="ident">MouseEvent</span> {
-            <span class="ident">screen_pos</span>: <span class="ident">vec2</span>(<span class="ident">event</span>.<span class="ident">screenX</span> <span class="kw">as</span> <span class="ident">i32</span>, <span class="ident">event</span>.<span class="ident">screenY</span> <span class="kw">as</span> <span class="ident">i32</span>),
-            <span class="ident">client_pos</span>: <span class="ident">vec2</span>(<span class="ident">event</span>.<span class="ident">clientX</span> <span class="kw">as</span> <span class="ident">i32</span>, <span class="ident">event</span>.<span class="ident">clientY</span> <span class="kw">as</span> <span class="ident">i32</span>),
+            <span class="ident">screen_pos</span>: (<span class="ident">event</span>.<span class="ident">screenX</span> <span class="kw">as</span> <span class="ident">i32</span>, <span class="ident">event</span>.<span class="ident">screenY</span> <span class="kw">as</span> <span class="ident">i32</span>),
+            <span class="ident">client_pos</span>: (<span class="ident">event</span>.<span class="ident">clientX</span> <span class="kw">as</span> <span class="ident">i32</span>, <span class="ident">event</span>.<span class="ident">clientY</span> <span class="kw">as</span> <span class="ident">i32</span>),
             <span class="ident">ctrl_key</span>: <span class="ident">event</span>.<span class="ident">ctrlKey</span> <span class="op">!=</span> <span class="ident">EM_FALSE</span>,
             <span class="ident">shift_key</span>: <span class="ident">event</span>.<span class="ident">shiftKey</span> <span class="op">!=</span> <span class="ident">EM_FALSE</span>,
             <span class="ident">alt_key</span>: <span class="ident">event</span>.<span class="ident">altKey</span> <span class="op">!=</span> <span class="ident">EM_FALSE</span>,
             <span class="ident">meta_key</span>: <span class="ident">event</span>.<span class="ident">metaKey</span> <span class="op">!=</span> <span class="ident">EM_FALSE</span>,
             <span class="ident">button</span>: <span class="ident">MouseButton</span>::<span class="ident">from</span>(<span class="ident">event</span>.<span class="ident">button</span>),
-            <span class="ident">movement</span>: <span class="ident">vec2</span>(<span class="ident">event</span>.<span class="ident">movementX</span> <span class="kw">as</span> <span class="ident">i32</span>, <span class="ident">event</span>.<span class="ident">movementY</span> <span class="kw">as</span> <span class="ident">i32</span>),
-            <span class="ident">target_pos</span>: <span class="ident">vec2</span>(<span class="ident">event</span>.<span class="ident">targetX</span> <span class="kw">as</span> <span class="ident">i32</span>, <span class="ident">event</span>.<span class="ident">targetY</span> <span class="kw">as</span> <span class="ident">i32</span>),
-            <span class="ident">canvas_pos</span>: <span class="ident">vec2</span>(<span class="ident">event</span>.<span class="ident">canvasX</span> <span class="kw">as</span> <span class="ident">i32</span>, <span class="ident">event</span>.<span class="ident">canvasY</span> <span class="kw">as</span> <span class="ident">i32</span>),
+            <span class="ident">movement</span>: (<span class="ident">event</span>.<span class="ident">movementX</span> <span class="kw">as</span> <span class="ident">i32</span>, <span class="ident">event</span>.<span class="ident">movementY</span> <span class="kw">as</span> <span class="ident">i32</span>),
+            <span class="ident">target_pos</span>: (<span class="ident">event</span>.<span class="ident">targetX</span> <span class="kw">as</span> <span class="ident">i32</span>, <span class="ident">event</span>.<span class="ident">targetY</span> <span class="kw">as</span> <span class="ident">i32</span>),
+            <span class="ident">canvas_pos</span>: (<span class="ident">event</span>.<span class="ident">canvasX</span> <span class="kw">as</span> <span class="ident">i32</span>, <span class="ident">event</span>.<span class="ident">canvasY</span> <span class="kw">as</span> <span class="ident">i32</span>),
             <span class="ident">padding</span>: <span class="ident">event</span>.<span class="ident">padding</span> <span class="kw">as</span> <span class="ident">i32</span>,
         }
     }
@@ -505,20 +515,22 @@
                 <h2>Keyboard Shortcuts</h2>
 
                 <dl>
-                    <dt>?</dt>
+                    <dt><kbd>?</kbd></dt>
                     <dd>Show this help dialog</dd>
-                    <dt>S</dt>
+                    <dt><kbd>S</kbd></dt>
                     <dd>Focus the search field</dd>
-                    <dt>↑</dt>
+                    <dt><kbd>↑</kbd></dt>
                     <dd>Move up in search results</dd>
-                    <dt>↓</dt>
+                    <dt><kbd>↓</kbd></dt>
                     <dd>Move down in search results</dd>
-                    <dt>↹</dt>
+                    <dt><kbd>↹</kbd></dt>
                     <dd>Switch tab</dd>
-                    <dt>&#9166;</dt>
+                    <dt><kbd>&#9166;</kbd></dt>
                     <dd>Go to active search result</dd>
-                    <dt style="width:31px;">+ / -</dt>
-                    <dd>Collapse/expand all sections</dd>
+                    <dt><kbd>+</kbd></dt>
+                    <dd>Expand all sections</dd>
+                    <dt><kbd>-</kbd></dt>
+                    <dd>Collapse all sections</dd>
                 </dl>
             </div>
 
