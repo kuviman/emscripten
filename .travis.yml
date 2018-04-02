@@ -1,8 +1,12 @@
 language: rust
-before_script:
-  - rustup target add wasm32-unknown-emscripten
-  - cargo install cargo-web
+cache:
+  cargo: true
+install:
+  - cargo install cargo-update; true
+  - cargo install-update -i cargo-update
+  - cargo install-update -i cargo-web
 script:
+  - (cd emscripten-sys && cargo web test --target wasm32-unknown-emscripten)
   - (cd emscripten && cargo web test --target wasm32-unknown-emscripten)
 before_deploy:
   - cargo doc --no-deps --all --target wasm32-unknown-emscripten
